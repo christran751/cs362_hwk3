@@ -7,10 +7,18 @@ class TestCreditCard(unittest.TestCase):
     Sample docstring
     """
 
-    length = [14, 15, 16, 17]
+    length = [16, 17]
 
     def generate_random_number(self, length):
         val = ""
+        chance = random.choice([1, 2, 3])
+        if chance == 1:
+            length -= 1
+        elif chance == 2:
+            length += 1
+        else:
+            length = length
+
         for i in range(length):
             val = val + str(random.randint(0, 9))
         return val
