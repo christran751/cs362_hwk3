@@ -11,7 +11,6 @@ class TestCreditCard(unittest.TestCase):
 
     def generate_random_number(self, length):
         val = ""
-        length = random.choice(invalid_lengths)
         for i in range(length):
             val = val + str(random.randint(0, 9))
         return val
