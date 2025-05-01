@@ -14,7 +14,7 @@ class TestCreditCard(unittest.TestCase):
 
     def test_credit_card(self):
         for _ in range(1000000):
-            val = self.generate_random_number(random.randint(16, 17))
+            val = self.generate_random_number(random.randint(15, 16))
             credit_card_validator(val)
 
 
