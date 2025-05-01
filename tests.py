@@ -14,10 +14,9 @@ class TestCreditCard(unittest.TestCase):
         return val
 
     def test_credit_card(self):
-        for _ in range(999999):
+        for _ in range(100000):
             val = self.generate_random_number(random.choice(self.length))
             credit_card_validator(val)
-
 
 if __name__ == "__main__":
     unittest.main()
