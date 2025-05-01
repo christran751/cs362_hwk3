@@ -6,7 +6,6 @@ class TestCreditCard(unittest.TestCase):
     """
     Sample docstring
     """
-    length = [16, 17]
     def generate_random_number(self, length):
         random_length_offset = random.choice([-1, 0, 1])
         length += random_length_offset
@@ -15,7 +14,7 @@ class TestCreditCard(unittest.TestCase):
 
     def test_credit_card(self):
         for _ in range(100000):
-            val = self.generate_random_number(random.choice(self.length))
+            val = self.generate_random_number(random.randint(16, 17))
             credit_card_validator(val)
 
 if __name__ == "__main__":
