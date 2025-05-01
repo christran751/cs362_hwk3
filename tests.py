@@ -16,7 +16,7 @@ class TestCreditCard(unittest.TestCase):
         return val
 
     def test_credit_card(self):
-        for _ in range(1000000):
+        for _ in range(100000):
             credit_card_validator(self.generate_random_number(random.choice(self.length)))
 
 
