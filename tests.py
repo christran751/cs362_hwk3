@@ -9,8 +9,8 @@ class TestCreditCard(unittest.TestCase):
     order to come up with theories as to why the bug occured.
     """
     def generate_random_number(self, length):
-        random_length_offset = random.choice([-1, 0, 1])
-        length += random_length_offset
+        # random_length_offset = random.choice([-1, 0, 1])
+        # length += random_length_offset
         return ''.join(random.choices("0123456789", k=length))
 
     def test_credit_card(self):
