@@ -13,10 +13,13 @@ class TestCreditCard(unittest.TestCase):
         return ''.join(random.choices("0123456789", k=length))
 
     def test_credit_card(self):
-        for _ in range(1000000):
+        for _ in range(1000000000): # added two zero remove later
             val = self.generate_random_number(random.randint(15, 16))
             credit_card_validator(val)
 
 
 if __name__ == "__main__":
     unittest.main()
+
+
+
