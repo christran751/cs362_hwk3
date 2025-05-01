@@ -7,7 +7,7 @@ class TestCreditCard(unittest.TestCase):
     Sample docstring
     """
     valid_length = [15, 16]
-    invalid_length = [random.randint(0, 14), 17]
+    invalid_length = [14, 17]
 
     def generate_random_number(self, length):
         val = ""
