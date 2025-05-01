@@ -6,8 +6,6 @@ class TestCreditCard(unittest.TestCase):
     """
     Sample docstring
     """
-    valid_length = [15, 16]
-    invalid_length = [14, 17]
 
     def generate_random_number(self, length):
         val = ""
@@ -16,11 +14,8 @@ class TestCreditCard(unittest.TestCase):
         return val
 
     def test_credit_card(self):
-        for _ in range(100000):
-            if random.choice([True, False]):
-                length = random.choice(self.invalid_length)
-            else:
-                length = random.choice(self.valid_length)
+        for _ in range(1000000):
+            length = random.randint(0, 17)
             credit_card_validator(self.generate_random_number(length))
 
 
