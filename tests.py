@@ -19,7 +19,7 @@ class TestCreditCard(unittest.TestCase):
             if random.choice([True, False]):
                 length = random.randint(0, 17)
             else:
-                length = random.choice(self.invalid_lengths)
+                length = random.choice(self.valid_length)
             credit_card_validator(self.generate_random_number(length))
 
 
