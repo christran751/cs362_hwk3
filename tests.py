@@ -6,6 +6,7 @@ class TestCreditCard(unittest.TestCase):
     """
     Sample docstring
     """
+    random.seed(42)
     valid_length = [15, 16]
     invalid_length = [random.randint(0, 14), 17]
 
