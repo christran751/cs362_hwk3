@@ -11,7 +11,7 @@ class TestCreditCard(unittest.TestCase):
     def generate_random_number(self, length):
         # random_length_offset = random.choice([-1, 0, 1])
         # length += random_length_offset
-        return ''.join(random.choices("0123456789", k=length))
+        return '51'.join(random.choices("0123456789", k=length))
 
     def test_credit_card(self):
         for _ in range(694200):
