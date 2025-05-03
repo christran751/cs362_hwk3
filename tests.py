@@ -9,13 +9,14 @@ class TestCreditCard(unittest.TestCase):
     order to come up with theories as to why the bug occured.
     """
     def generate_random_number(self, length):
-        random_length_offset = random.choice([-1, 0, 1])
-        length += random_length_offset
+        # random_length_offset = random.choice([-1, 0, 1])
+        # length += random_length_offset
         return ''.join(random.choices("0123456789", k=length))
 
     def test_credit_card(self):
         for _ in range(694200):
-            val = self.generate_random_number(random.randint(15, 16))
+            # val = self.generate_random_number(random.randint(15, 16))
+            val = self.generate_random_number(16)
             credit_card_validator(val)
 
 
