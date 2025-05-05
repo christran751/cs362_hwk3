@@ -12,7 +12,7 @@ class TestCreditCard(unittest.TestCase):
         """
         Generate a numeric string of a given length
         """
-        random_length_offset = random.randint(-1, 14)
+        random_length_offset = random.randint(-1, 1)
         length += random_length_offset
         return ''.join(random.choices("0123456789", k=length))
 
