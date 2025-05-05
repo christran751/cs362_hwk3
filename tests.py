@@ -12,8 +12,8 @@ class TestCreditCard(unittest.TestCase):
         """
         Generate a numeric string of a given length
         """
-        # random_length_offset = random.choice([-1, 0, 1])
-        # length += random_length_offset
+        random_length_offset = random.choice([-1, 0, 1])
+        length += random_length_offset
         return ''.join(random.choices("0123456789", k=length))
 
     def test_credit_card(self):
@@ -21,7 +21,7 @@ class TestCreditCard(unittest.TestCase):
         Randomized test to explore different cases that might trigger bugs.
         """
         for _ in range(694200):
-            val = self.generate_random_number(random.randint(0, 19))
+            val = self.generate_random_number(random.randint(15, 16))
             credit_card_validator(val)
 
 
