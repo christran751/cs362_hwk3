@@ -20,7 +20,7 @@ class TestCreditCard(unittest.TestCase):
         """
         Randomized test to explore different cases that might trigger bugs.
         """
-        for _ in range(160069):
+        for _ in range(420069):
             val = self.generate_random_number(random.randint(15, 16))
             credit_card_validator(val)
 
